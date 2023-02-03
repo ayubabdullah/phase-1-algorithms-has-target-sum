@@ -1,12 +1,11 @@
 function hasTargetSum(array, target) {
+  const seenNumbers = new Set();
   // Write your algorithm here
-  for (let baseElement = 0; baseElement < array.length; baseElement++) {
-    for (let otherELement = 0; otherELement < array.length; otherELement++) {
-      if (baseElement === otherELement) continue;
-      if (array[baseElement] + array[otherELement] === target) return true;
-    }
+  for (number of array) {
+    const complement = target - number;
+    if (seenNumbers.has(complement)) return true;
+    seenNumbers.add(number);
   }
-
   return false;
 }
 
